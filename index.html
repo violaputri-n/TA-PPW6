@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather Dashboard Indonesia</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+
+<body>
+  <h1>Weather Dashboard Indonesia</h1>
+
+  <div class="top-controls">
+    <div class="search-container">
+      <input id="searchInput" placeholder="Cari kota Indonesia..." />
+      <button id="searchBtn">Search</button>
+
+      <ul id="suggestions"></ul>
+    </div>
+
+    <div class="btn-row">
+      <button id="unitBtn">°C / °F</button>
+      <button id="themeBtn">Dark / Light</button>
+      <button id="refreshBtn">Refresh</button>
+    </div>
+  </div>
+
+  <div id="error" class="error"></div>
+
+  <div class="card">
+    <h2 id="cityName">-</h2>
+    <div>Koordinat: <span id="coords">-</span></div>
+    <div>Waktu: <span id="timestamp">-</span></div>
+
+    <h1 id="temp">-</h1>
+    <div id="condition">-</div>
+
+    <div>Humidity: <span id="humidity">-</span></div>
+    <div>Wind: <span id="wind">-</span></div>
+
+    <button id="favBtn">⭐ Tambah Favorit</button>
+  </div>
+
+  <div class="card">
+    <h3>5-Day Forecast</h3>
+    <div id="forecastList"></div>
+  </div>
+
+  <div class="card">
+    <h3>Peta Lokasi</h3>
+    <div id="map"></div>
+  </div>
+
+  <div class="card">
+    <h3>Favorite Kota</h3>
+    <div id="favoriteList"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
