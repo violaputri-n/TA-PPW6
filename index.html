@@ -11,13 +11,12 @@
 </head>
 
 <body>
-  <h1>Weather Dashboard Indonesia</h1>
+  <h1>Monitor Cuaca di Indonesia</h1>
 
   <div class="top-controls">
     <div class="search-container">
       <input id="searchInput" placeholder="Cari kota Indonesia..." />
       <button id="searchBtn">Search</button>
-
       <ul id="suggestions"></ul>
     </div>
 
@@ -30,23 +29,45 @@
 
   <div id="error" class="error"></div>
 
-  <div class="card">
-    <h2 id="cityName">-</h2>
-    <div>Koordinat: <span id="coords">-</span></div>
-    <div>Waktu: <span id="timestamp">-</span></div>
+  <div class="card main-weather-card">
+    <div class="weather-header">
+      <div>
+        <h2 id="cityName">-</h2>
+        <div class="meta-info">
+          <span id="coords">-</span>
+        </div>
+        <div class="meta-info">
+          <span id="timestamp">-</span>
+        </div>
+      </div>
+      <button id="favBtn" class="fav-btn">⭐ Favorit</button>
+    </div>
 
-    <h1 id="temp">-</h1>
-    <div id="condition">-</div>
+    <div class="main-weather-display">
+      <div class="weather-icon-large" id="mainWeatherIcon">☀️</div>
+      <div class="temp-display">
+        <h1 id="temp">-</h1>
+        <div id="condition" class="condition-text">-</div>
+      </div>
+    </div>
 
-    <div>Humidity: <span id="humidity">-</span></div>
-    <div>Wind: <span id="wind">-</span></div>
-
-    <button id="favBtn">⭐ Tambah Favorit</button>
+    <div class="weather-details-grid">
+      <div class="detail-item">
+        <div class="detail-label">Kelembapan</div>
+        <div class="detail-value" id="humidity">-</div>
+      </div>
+      <div class="detail-item">
+        <div class="detail-label">Kecepatan Angin</div>
+        <div class="detail-value" id="wind">-</div>
+      </div>
+    </div>
   </div>
 
   <div class="card">
-    <h3>5-Day Forecast</h3>
-    <div id="forecastList"></div>
+    <h3>Prakiraan 5 Hari</h3>
+    <div id="forecastScroll">
+      <div id="forecastList"></div>
+    </div>
   </div>
 
   <div class="card">
